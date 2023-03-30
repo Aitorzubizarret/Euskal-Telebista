@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A6B5E8729D6383E0002C6CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */; };
+		1A6B5E8929D6383E0002C6CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */; };
+		1A6B5E8B29D6383E0002C6CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8A29D6383E0002C6CE /* ViewController.swift */; };
+		1A6B5E8E29D6383E0002C6CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8C29D6383E0002C6CE /* Main.storyboard */; };
+		1A6B5E9029D6383F0002C6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */; };
+		1A6B5E9329D6383F0002C6CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */; };
+		1A6B5E9E29D6383F0002C6CE /* Euskal_TelebistaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E9D29D6383F0002C6CE /* Euskal_TelebistaTests.swift */; };
+		1A6B5EA829D6383F0002C6CE /* Euskal_TelebistaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EA729D6383F0002C6CE /* Euskal_TelebistaUITests.swift */; };
+		1A6B5EAA29D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EA929D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A6B5E9A29D6383F0002C6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A6B5E7B29D6383E0002C6CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A6B5E8229D6383E0002C6CE;
+			remoteInfo = "Euskal-Telebista";
+		};
+		1A6B5EA429D6383F0002C6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A6B5E7B29D6383E0002C6CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A6B5E8229D6383E0002C6CE;
+			remoteInfo = "Euskal-Telebista";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A6B5E8329D6383E0002C6CE /* Euskal-Telebista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Euskal-Telebista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1A6B5E8A29D6383E0002C6CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A6B5E8D29D6383E0002C6CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A6B5E9229D6383F0002C6CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A6B5E9429D6383F0002C6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6B5E9929D6383F0002C6CE /* Euskal-TelebistaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euskal-TelebistaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6B5E9D29D6383F0002C6CE /* Euskal_TelebistaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euskal_TelebistaTests.swift; sourceTree = "<group>"; };
+		1A6B5EA329D6383F0002C6CE /* Euskal-TelebistaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euskal-TelebistaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6B5EA729D6383F0002C6CE /* Euskal_TelebistaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euskal_TelebistaUITests.swift; sourceTree = "<group>"; };
+		1A6B5EA929D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euskal_TelebistaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A6B5E8029D6383E0002C6CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6B5E9629D6383F0002C6CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6B5EA029D6383F0002C6CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A6B5E7A29D6383E0002C6CE = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E8529D6383E0002C6CE /* Euskal-Telebista */,
+				1A6B5E9C29D6383F0002C6CE /* Euskal-TelebistaTests */,
+				1A6B5EA629D6383F0002C6CE /* Euskal-TelebistaUITests */,
+				1A6B5E8429D6383E0002C6CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A6B5E8429D6383E0002C6CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E8329D6383E0002C6CE /* Euskal-Telebista.app */,
+				1A6B5E9929D6383F0002C6CE /* Euskal-TelebistaTests.xctest */,
+				1A6B5EA329D6383F0002C6CE /* Euskal-TelebistaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A6B5E8529D6383E0002C6CE /* Euskal-Telebista */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */,
+				1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */,
+				1A6B5E8A29D6383E0002C6CE /* ViewController.swift */,
+				1A6B5E8C29D6383E0002C6CE /* Main.storyboard */,
+				1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */,
+				1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */,
+				1A6B5E9429D6383F0002C6CE /* Info.plist */,
+			);
+			path = "Euskal-Telebista";
+			sourceTree = "<group>";
+		};
+		1A6B5E9C29D6383F0002C6CE /* Euskal-TelebistaTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E9D29D6383F0002C6CE /* Euskal_TelebistaTests.swift */,
+			);
+			path = "Euskal-TelebistaTests";
+			sourceTree = "<group>";
+		};
+		1A6B5EA629D6383F0002C6CE /* Euskal-TelebistaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5EA729D6383F0002C6CE /* Euskal_TelebistaUITests.swift */,
+				1A6B5EA929D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift */,
+			);
+			path = "Euskal-TelebistaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A6B5E8229D6383E0002C6CE /* Euskal-Telebista */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A6B5EAD29D6383F0002C6CE /* Build configuration list for PBXNativeTarget "Euskal-Telebista" */;
+			buildPhases = (
+				1A6B5E7F29D6383E0002C6CE /* Sources */,
+				1A6B5E8029D6383E0002C6CE /* Frameworks */,
+				1A6B5E8129D6383E0002C6CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Euskal-Telebista";
+			productName = "Euskal-Telebista";
+			productReference = 1A6B5E8329D6383E0002C6CE /* Euskal-Telebista.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A6B5E9829D6383F0002C6CE /* Euskal-TelebistaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A6B5EB029D6383F0002C6CE /* Build configuration list for PBXNativeTarget "Euskal-TelebistaTests" */;
+			buildPhases = (
+				1A6B5E9529D6383F0002C6CE /* Sources */,
+				1A6B5E9629D6383F0002C6CE /* Frameworks */,
+				1A6B5E9729D6383F0002C6CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A6B5E9B29D6383F0002C6CE /* PBXTargetDependency */,
+			);
+			name = "Euskal-TelebistaTests";
+			productName = "Euskal-TelebistaTests";
+			productReference = 1A6B5E9929D6383F0002C6CE /* Euskal-TelebistaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A6B5EA229D6383F0002C6CE /* Euskal-TelebistaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A6B5EB329D6383F0002C6CE /* Build configuration list for PBXNativeTarget "Euskal-TelebistaUITests" */;
+			buildPhases = (
+				1A6B5E9F29D6383F0002C6CE /* Sources */,
+				1A6B5EA029D6383F0002C6CE /* Frameworks */,
+				1A6B5EA129D6383F0002C6CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A6B5EA529D6383F0002C6CE /* PBXTargetDependency */,
+			);
+			name = "Euskal-TelebistaUITests";
+			productName = "Euskal-TelebistaUITests";
+			productReference = 1A6B5EA329D6383F0002C6CE /* Euskal-TelebistaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A6B5E7B29D6383E0002C6CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					1A6B5E8229D6383E0002C6CE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					1A6B5E9829D6383F0002C6CE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1A6B5E8229D6383E0002C6CE;
+					};
+					1A6B5EA229D6383F0002C6CE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1A6B5E8229D6383E0002C6CE;
+					};
+				};
+			};
+			buildConfigurationList = 1A6B5E7E29D6383E0002C6CE /* Build configuration list for PBXProject "Euskal-Telebista" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A6B5E7A29D6383E0002C6CE;
+			productRefGroup = 1A6B5E8429D6383E0002C6CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A6B5E8229D6383E0002C6CE /* Euskal-Telebista */,
+				1A6B5E9829D6383F0002C6CE /* Euskal-TelebistaTests */,
+				1A6B5EA229D6383F0002C6CE /* Euskal-TelebistaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A6B5E8129D6383E0002C6CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6B5E9329D6383F0002C6CE /* LaunchScreen.storyboard in Resources */,
+				1A6B5E9029D6383F0002C6CE /* Assets.xcassets in Resources */,
+				1A6B5E8E29D6383E0002C6CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6B5E9729D6383F0002C6CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6B5EA129D6383F0002C6CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A6B5E7F29D6383E0002C6CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6B5E8B29D6383E0002C6CE /* ViewController.swift in Sources */,
+				1A6B5E8729D6383E0002C6CE /* AppDelegate.swift in Sources */,
+				1A6B5E8929D6383E0002C6CE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6B5E9529D6383F0002C6CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6B5E9E29D6383F0002C6CE /* Euskal_TelebistaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6B5E9F29D6383F0002C6CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6B5EA829D6383F0002C6CE /* Euskal_TelebistaUITests.swift in Sources */,
+				1A6B5EAA29D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A6B5E9B29D6383F0002C6CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A6B5E8229D6383E0002C6CE /* Euskal-Telebista */;
+			targetProxy = 1A6B5E9A29D6383F0002C6CE /* PBXContainerItemProxy */;
+		};
+		1A6B5EA529D6383F0002C6CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A6B5E8229D6383E0002C6CE /* Euskal-Telebista */;
+			targetProxy = 1A6B5EA429D6383F0002C6CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A6B5E8C29D6383E0002C6CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A6B5E8D29D6383E0002C6CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A6B5E9229D6383F0002C6CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A6B5EAB29D6383F0002C6CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A6B5EAC29D6383F0002C6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A6B5EAE29D6383F0002C6CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V9WUS7ZBGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Euskal-Telebista/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eus.aitorzubizarreta.Euskal-Telebista";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A6B5EAF29D6383F0002C6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V9WUS7ZBGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Euskal-Telebista/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eus.aitorzubizarreta.Euskal-Telebista";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A6B5EB129D6383F0002C6CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V9WUS7ZBGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eus.aitorzubizarreta.Euskal-TelebistaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Euskal-Telebista.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Euskal-Telebista";
+			};
+			name = Debug;
+		};
+		1A6B5EB229D6383F0002C6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V9WUS7ZBGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eus.aitorzubizarreta.Euskal-TelebistaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Euskal-Telebista.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Euskal-Telebista";
+			};
+			name = Release;
+		};
+		1A6B5EB429D6383F0002C6CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V9WUS7ZBGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eus.aitorzubizarreta.Euskal-TelebistaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Euskal-Telebista";
+			};
+			name = Debug;
+		};
+		1A6B5EB529D6383F0002C6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V9WUS7ZBGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eus.aitorzubizarreta.Euskal-TelebistaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Euskal-Telebista";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A6B5E7E29D6383E0002C6CE /* Build configuration list for PBXProject "Euskal-Telebista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6B5EAB29D6383F0002C6CE /* Debug */,
+				1A6B5EAC29D6383F0002C6CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A6B5EAD29D6383F0002C6CE /* Build configuration list for PBXNativeTarget "Euskal-Telebista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6B5EAE29D6383F0002C6CE /* Debug */,
+				1A6B5EAF29D6383F0002C6CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A6B5EB029D6383F0002C6CE /* Build configuration list for PBXNativeTarget "Euskal-TelebistaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6B5EB129D6383F0002C6CE /* Debug */,
+				1A6B5EB229D6383F0002C6CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A6B5EB329D6383F0002C6CE /* Build configuration list for PBXNativeTarget "Euskal-TelebistaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6B5EB429D6383F0002C6CE /* Debug */,
+				1A6B5EB529D6383F0002C6CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A6B5E7B29D6383E0002C6CE /* Project object */;
+}
