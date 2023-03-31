@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		1A6B5E8729D6383E0002C6CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */; };
 		1A6B5E8929D6383E0002C6CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */; };
-		1A6B5E8B29D6383E0002C6CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8A29D6383E0002C6CE /* ViewController.swift */; };
-		1A6B5E8E29D6383E0002C6CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8C29D6383E0002C6CE /* Main.storyboard */; };
 		1A6B5E9029D6383F0002C6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */; };
 		1A6B5E9329D6383F0002C6CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */; };
 		1A6B5E9E29D6383F0002C6CE /* Euskal_TelebistaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5E9D29D6383F0002C6CE /* Euskal_TelebistaTests.swift */; };
 		1A6B5EA829D6383F0002C6CE /* Euskal_TelebistaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EA729D6383F0002C6CE /* Euskal_TelebistaUITests.swift */; };
 		1A6B5EAA29D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EA929D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift */; };
+		1A6B5EC029D6DE520002C6CE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EBB29D6DE520002C6CE /* MainPresenter.swift */; };
+		1A6B5EC129D6DE520002C6CE /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EBC29D6DE520002C6CE /* MainRouter.swift */; };
+		1A6B5EC229D6DE520002C6CE /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EBD29D6DE520002C6CE /* MainProtocols.swift */; };
+		1A6B5EC329D6DE520002C6CE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EBE29D6DE520002C6CE /* MainInteractor.swift */; };
+		1A6B5EC429D6DE520002C6CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EBF29D6DE520002C6CE /* MainView.swift */; };
+		1A6B5EC629D6DE660002C6CE /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5EC529D6DE660002C6CE /* MainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		1A6B5E8329D6383E0002C6CE /* Euskal-Telebista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Euskal-Telebista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A6B5E8A29D6383E0002C6CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A6B5E8D29D6383E0002C6CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A6B5E9229D6383F0002C6CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A6B5E9429D6383F0002C6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,12 @@
 		1A6B5EA329D6383F0002C6CE /* Euskal-TelebistaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euskal-TelebistaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6B5EA729D6383F0002C6CE /* Euskal_TelebistaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euskal_TelebistaUITests.swift; sourceTree = "<group>"; };
 		1A6B5EA929D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euskal_TelebistaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A6B5EBB29D6DE520002C6CE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		1A6B5EBC29D6DE520002C6CE /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		1A6B5EBD29D6DE520002C6CE /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		1A6B5EBE29D6DE520002C6CE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		1A6B5EBF29D6DE520002C6CE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1A6B5EC529D6DE660002C6CE /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,10 @@
 		1A6B5E8529D6383E0002C6CE /* Euskal-Telebista */ = {
 			isa = PBXGroup;
 			children = (
-				1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */,
-				1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */,
-				1A6B5E8A29D6383E0002C6CE /* ViewController.swift */,
-				1A6B5E8C29D6383E0002C6CE /* Main.storyboard */,
-				1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */,
-				1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */,
-				1A6B5E9429D6383F0002C6CE /* Info.plist */,
+				1A6B5EB629D6DDAD0002C6CE /* App */,
+				1A6B5EB729D6DDB70002C6CE /* Resources */,
+				1A6B5EB829D6DDC30002C6CE /* Supporting files */,
+				1A6B5EB929D6DE340002C6CE /* Modules */,
 			);
 			path = "Euskal-Telebista";
 			sourceTree = "<group>";
@@ -125,6 +130,53 @@
 				1A6B5EA929D6383F0002C6CE /* Euskal_TelebistaUITestsLaunchTests.swift */,
 			);
 			path = "Euskal-TelebistaUITests";
+			sourceTree = "<group>";
+		};
+		1A6B5EB629D6DDAD0002C6CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E8629D6383E0002C6CE /* AppDelegate.swift */,
+				1A6B5E8829D6383E0002C6CE /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1A6B5EB729D6DDB70002C6CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E8F29D6383F0002C6CE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A6B5EB829D6DDC30002C6CE /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */,
+				1A6B5E9429D6383F0002C6CE /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		1A6B5EB929D6DE340002C6CE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5EBA29D6DE400002C6CE /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1A6B5EBA29D6DE400002C6CE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B5EBD29D6DE520002C6CE /* MainProtocols.swift */,
+				1A6B5EBF29D6DE520002C6CE /* MainView.swift */,
+				1A6B5EC529D6DE660002C6CE /* MainView.xib */,
+				1A6B5EBB29D6DE520002C6CE /* MainPresenter.swift */,
+				1A6B5EBE29D6DE520002C6CE /* MainInteractor.swift */,
+				1A6B5EBC29D6DE520002C6CE /* MainRouter.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6B5EC629D6DE660002C6CE /* MainView.xib in Resources */,
 				1A6B5E9329D6383F0002C6CE /* LaunchScreen.storyboard in Resources */,
 				1A6B5E9029D6383F0002C6CE /* Assets.xcassets in Resources */,
-				1A6B5E8E29D6383E0002C6CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6B5E8B29D6383E0002C6CE /* ViewController.swift in Sources */,
 				1A6B5E8729D6383E0002C6CE /* AppDelegate.swift in Sources */,
+				1A6B5EC429D6DE520002C6CE /* MainView.swift in Sources */,
+				1A6B5EC129D6DE520002C6CE /* MainRouter.swift in Sources */,
+				1A6B5EC029D6DE520002C6CE /* MainPresenter.swift in Sources */,
+				1A6B5EC229D6DE520002C6CE /* MainProtocols.swift in Sources */,
 				1A6B5E8929D6383E0002C6CE /* SceneDelegate.swift in Sources */,
+				1A6B5EC329D6DE520002C6CE /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1A6B5E8C29D6383E0002C6CE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A6B5E8D29D6383E0002C6CE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A6B5E9129D6383F0002C6CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,10 +487,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V9WUS7ZBGW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Euskal-Telebista/Info.plist";
+				INFOPLIST_FILE = "Euskal-Telebista/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -468,10 +516,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V9WUS7ZBGW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Euskal-Telebista/Info.plist";
+				INFOPLIST_FILE = "Euskal-Telebista/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
