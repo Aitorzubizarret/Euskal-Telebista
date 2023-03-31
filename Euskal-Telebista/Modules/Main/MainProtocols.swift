@@ -33,6 +33,7 @@ protocol MainViewToPresenterProtocol: AnyObject {
     func viewDidLoad()
     
     func numberOfTVShows() -> Int
+    func imageURLTVShowAt(_ row: Int) -> URL?
     func nameTVShowAt(_ row: Int) -> String
     
 }
@@ -53,7 +54,7 @@ protocol MainPresenterToInteractorProtocol: AnyObject {
     var presenter: MainInteractorToPresenterProtocol? { get set }
     var apiManager: MainInteractorToAPIManagerProtocol? { get set }
     
-    var tvShowsNames: [String] { get set }
+    var tvShowsNamesImages: [TVShowNameImage] { get set }
     
     func getTVShows()
     
@@ -62,7 +63,7 @@ protocol MainPresenterToInteractorProtocol: AnyObject {
 // APIMANAGER -> INTERACTOR
 protocol MainAPIManagerToInteractorProtocol: AnyObject {
     
-    func fetchTVShowsSuccess(tvShows: [TVShow])
+    func fetchTVShowsSuccess(tvShows: [TVShow], baseURL: String)
     func fetchTVShowsFailure(errorDescription: String)
     
 }

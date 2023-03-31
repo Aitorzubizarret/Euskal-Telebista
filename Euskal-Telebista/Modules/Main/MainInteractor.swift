@@ -15,7 +15,7 @@ class MainInteractor {
     var presenter: MainInteractorToPresenterProtocol?
     var apiManager: MainInteractorToAPIManagerProtocol?
     
-    var tvShowsNames: [String] = [] {
+    var tvShowsNamesImages: [TVShowNameImage] = [] {
         didSet {
             presenter?.getTVShowsSuccess()
         }
@@ -34,8 +34,16 @@ extension MainInteractor: MainPresenterToInteractorProtocol {
 
 extension MainInteractor: MainAPIManagerToInteractorProtocol {
     
-    func fetchTVShowsSuccess(tvShows: [TVShow]) {
-        tvShowsNames = tvShows.map {$0.NOMBRE_GROUP}
+    func fetchTVShowsSuccess(tvShows: [TVShow], baseURL: String) {
+        tvShowsNamesImages = tvShows.map {
+            let name: String = $0.NOMBRE_GROUP
+            if let image = $0.images.first {
+                let urlString: String = baseURL + image.URL
+                return TVShowNameImage(name: name, image: URL(string: urlString))
+            } else {
+                return TVShowNameImage(name: name, image: nil)
+            }
+        }
     }
     
     func fetchTVShowsFailure(errorDescription: String) {

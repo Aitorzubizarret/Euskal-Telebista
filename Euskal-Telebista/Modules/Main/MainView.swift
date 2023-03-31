@@ -61,6 +61,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowCellTableViewCell", for: indexPath) as! TVShowCellTableViewCell
+        cell.imageURL = presenter?.imageURLTVShowAt(indexPath.row)
         cell.name = presenter?.nameTVShowAt(indexPath.row) ?? ""
         return cell
     }

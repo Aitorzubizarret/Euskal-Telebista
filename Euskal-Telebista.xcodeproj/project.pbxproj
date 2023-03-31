@@ -30,6 +30,8 @@
 		1A6B5EDA29D6E73D0002C6CE /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5ED929D6E73D0002C6CE /* Playlist.swift */; };
 		1A6B5EDF29D72A600002C6CE /* TVShowCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EDD29D72A600002C6CE /* TVShowCellTableViewCell.swift */; };
 		1A6B5EE029D72A600002C6CE /* TVShowCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B5EDE29D72A600002C6CE /* TVShowCellTableViewCell.xib */; };
+		1A6B5EE329D76D7B0002C6CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1A6B5EE229D76D7B0002C6CE /* Kingfisher */; };
+		1A6B5EE529D777EA0002C6CE /* TVShowNameImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B5EE429D777EA0002C6CE /* TVShowNameImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,7 @@
 		1A6B5ED929D6E73D0002C6CE /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		1A6B5EDD29D72A600002C6CE /* TVShowCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCellTableViewCell.swift; sourceTree = "<group>"; };
 		1A6B5EDE29D72A600002C6CE /* TVShowCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCellTableViewCell.xib; sourceTree = "<group>"; };
+		1A6B5EE429D777EA0002C6CE /* TVShowNameImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowNameImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6B5EE329D76D7B0002C6CE /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +224,7 @@
 				1A6B5ED329D6E5E40002C6CE /* TVShow.swift */,
 				1A6B5ED729D6E6F50002C6CE /* ImageData.swift */,
 				1A6B5ED929D6E73D0002C6CE /* Playlist.swift */,
+				1A6B5EE429D777EA0002C6CE /* TVShowNameImage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -257,6 +262,9 @@
 			dependencies = (
 			);
 			name = "Euskal-Telebista";
+			packageProductDependencies = (
+				1A6B5EE229D76D7B0002C6CE /* Kingfisher */,
+			);
 			productName = "Euskal-Telebista";
 			productReference = 1A6B5E8329D6383E0002C6CE /* Euskal-Telebista.app */;
 			productType = "com.apple.product-type.application";
@@ -329,6 +337,9 @@
 				Base,
 			);
 			mainGroup = 1A6B5E7A29D6383E0002C6CE;
+			packageReferences = (
+				1A6B5EE129D76D7B0002C6CE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 1A6B5E8429D6383E0002C6CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6B5EE529D777EA0002C6CE /* TVShowNameImage.swift in Sources */,
 				1A6B5ED629D6E5F00002C6CE /* TVShowResponse.swift in Sources */,
 				1A6B5E8729D6383E0002C6CE /* AppDelegate.swift in Sources */,
 				1A6B5EC429D6DE520002C6CE /* MainView.swift in Sources */,
@@ -724,6 +736,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A6B5EE129D76D7B0002C6CE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A6B5EE229D76D7B0002C6CE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A6B5EE129D76D7B0002C6CE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A6B5E7B29D6383E0002C6CE /* Project object */;
 }

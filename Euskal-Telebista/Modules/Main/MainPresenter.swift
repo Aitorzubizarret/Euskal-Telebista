@@ -27,11 +27,15 @@ extension MainPresenter: MainViewToPresenterProtocol {
     }
     
     func numberOfTVShows() -> Int {
-        return interactor?.tvShowsNames.count ?? 0
+        return interactor?.tvShowsNamesImages.count ?? 0
+    }
+    
+    func imageURLTVShowAt(_ row: Int) -> URL? {
+        return interactor?.tvShowsNamesImages[row].image
     }
     
     func nameTVShowAt(_ row: Int) -> String {
-        return interactor?.tvShowsNames[row] ?? ""
+        return interactor?.tvShowsNamesImages[row].name ?? ""
     }
     
 }

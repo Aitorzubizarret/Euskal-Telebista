@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TVShowCellTableViewCell: UITableViewCell {
     
@@ -19,6 +20,13 @@ class TVShowCellTableViewCell: UITableViewCell {
     var name: String = "" {
         didSet {
             nameLabel.text = name
+        }
+    }
+    var imageURL: URL? = nil {
+        didSet {
+            guard let imageURL = imageURL else { return }
+            
+            coverImageView.kf.setImage(with: imageURL)
         }
     }
     

@@ -77,7 +77,7 @@ extension APIManager: MainInteractorToAPIManagerProtocol {
         request(endpoint: tvShowsEndpoint) { (result: Result<TVShowResponse, Error>) in
             switch result {
             case .success(let tvShowSuccess):
-                self.interactor?.fetchTVShowsSuccess(tvShows: tvShowSuccess.web_group)
+                self.interactor?.fetchTVShowsSuccess(tvShows: tvShowSuccess.web_group, baseURL: tvShowSuccess.vod_url)
             case .failure(let error):
                 self.interactor?.fetchTVShowsFailure(errorDescription: "Error fetching TV Shows. \(error)")
             }
