@@ -22,10 +22,14 @@ class MainPresenter  {
 
 extension MainPresenter: MainViewToPresenterProtocol {
     
-    func viewDidLoad() {}
+    func viewDidLoad() {
+        interactor?.getTVShows()
+    }
     
 }
 
 // MARK: - MainInteractorToPresenterProtocol
 
-extension MainPresenter: MainInteractorToPresenterProtocol {}
+extension MainPresenter: MainInteractorToPresenterProtocol {
+    
+}

@@ -13,9 +13,27 @@ class MainInteractor {
     // MARK: - Properties (from MainPresenterToInteractorProtocol)
     
     var presenter: MainInteractorToPresenterProtocol?
-    
+    var apiManager: MainInteractorToAPIManagerProtocol?
 }
 
 // MARK: - MainPresenterToInteractorProtocol
 
-extension MainInteractor: MainPresenterToInteractorProtocol {}
+extension MainInteractor: MainPresenterToInteractorProtocol {
+    
+    func getTVShows() {
+        apiManager?.fetchTVShows()
+    }
+    
+}
+
+extension MainInteractor: MainAPIManagerToInteractorProtocol {
+    
+    func fetchTVShowsSuccess() {
+        print("fetchTVShowsSuccess")
+    }
+    
+    func fetchTVShowsFailure() {
+        print("")
+    }
+    
+}

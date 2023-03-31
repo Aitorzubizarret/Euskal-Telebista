@@ -40,6 +40,17 @@ protocol MainInteractorToPresenterProtocol: AnyObject {}
 protocol MainPresenterToInteractorProtocol: AnyObject {
     
     var presenter: MainInteractorToPresenterProtocol? { get set }
+    var apiManager: MainInteractorToAPIManagerProtocol? { get set }
+    
+    func getTVShows()
+    
+}
+
+// APIMANAGER -> INTERACTOR
+protocol MainAPIManagerToInteractorProtocol: AnyObject {
+    
+    func fetchTVShowsSuccess()
+    func fetchTVShowsFailure()
     
 }
 
@@ -49,5 +60,16 @@ protocol MainPresenterToInteractorProtocol: AnyObject {
 protocol MainPresenterToRouterProtocol: AnyObject {
     
     static func createModule() -> UIViewController
+    
+}
+
+// MARK: - API Manager
+
+// INTERACTOR -> API MANAGER
+protocol MainInteractorToAPIManagerProtocol {
+    
+    var interactor: MainAPIManagerToInteractorProtocol? { get set }
+    
+    func fetchTVShows()
     
 }
