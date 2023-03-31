@@ -18,6 +18,7 @@ extension MainRouter: MainPresenterToRouterProtocol {
     static func createModule() -> UIViewController {
         // View Controller.
         let viewController = MainViewController()
+        viewController.title = "Euskal Telebista"
         
         // Presenter.
         let presenter: MainViewToPresenterProtocol & MainInteractorToPresenterProtocol = MainPresenter()
