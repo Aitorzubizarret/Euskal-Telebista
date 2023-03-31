@@ -26,10 +26,25 @@ extension MainPresenter: MainViewToPresenterProtocol {
         interactor?.getTVShows()
     }
     
+    func numberOfTVShows() -> Int {
+        return interactor?.tvShowsNames.count ?? 0
+    }
+    
+    func nameTVShowAt(_ row: Int) -> String {
+        return interactor?.tvShowsNames[row] ?? ""
+    }
+    
 }
 
 // MARK: - MainInteractorToPresenterProtocol
 
 extension MainPresenter: MainInteractorToPresenterProtocol {
     
+    func getTVShowsSuccess() {
+        view?.onGetTVShowsSuccess()
+    }
+    
+    func getTVShowsFailure(errorDescription: String) {
+        view?.onGetTVShowsFailure(errorDescription: errorDescription)
+    }
 }

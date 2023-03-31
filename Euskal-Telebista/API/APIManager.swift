@@ -77,11 +77,9 @@ extension APIManager: MainInteractorToAPIManagerProtocol {
         request(endpoint: tvShowsEndpoint) { (result: Result<TVShowResponse, Error>) in
             switch result {
             case .success(let tvShowSuccess):
-                print("Success \(tvShowSuccess)")
-                self.interactor?.fetchTVShowsSuccess()
+                self.interactor?.fetchTVShowsSuccess(tvShows: tvShowSuccess.web_group)
             case .failure(let error):
-                print("Error : \(error)")
-                self.interactor?.fetchTVShowsFailure()
+                self.interactor?.fetchTVShowsFailure(errorDescription: "Error fetching TV Shows. \(error)")
             }
         }
     }

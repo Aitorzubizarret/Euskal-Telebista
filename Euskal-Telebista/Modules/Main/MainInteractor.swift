@@ -14,6 +14,12 @@ class MainInteractor {
     
     var presenter: MainInteractorToPresenterProtocol?
     var apiManager: MainInteractorToAPIManagerProtocol?
+    
+    var tvShowsNames: [String] = [] {
+        didSet {
+            presenter?.getTVShowsSuccess()
+        }
+    }
 }
 
 // MARK: - MainPresenterToInteractorProtocol
@@ -28,12 +34,12 @@ extension MainInteractor: MainPresenterToInteractorProtocol {
 
 extension MainInteractor: MainAPIManagerToInteractorProtocol {
     
-    func fetchTVShowsSuccess() {
-        print("fetchTVShowsSuccess")
+    func fetchTVShowsSuccess(tvShows: [TVShow]) {
+        tvShowsNames = tvShows.map {$0.NOMBRE_GROUP}
     }
     
-    func fetchTVShowsFailure() {
-        print("")
+    func fetchTVShowsFailure(errorDescription: String) {
+        presenter?.getTVShowsFailure(errorDescription: errorDescription)
     }
     
 }

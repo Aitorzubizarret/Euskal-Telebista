@@ -16,6 +16,9 @@ protocol MainPresenterToViewProtocol: AnyObject {
     
     var presenter: MainViewToPresenterProtocol? { get set }
     
+    func onGetTVShowsSuccess()
+    func onGetTVShowsFailure(errorDescription: String)
+    
 }
 
 // MARK: - Presenter
@@ -29,10 +32,18 @@ protocol MainViewToPresenterProtocol: AnyObject {
     
     func viewDidLoad()
     
+    func numberOfTVShows() -> Int
+    func nameTVShowAt(_ row: Int) -> String
+    
 }
 
 // INTERACTOR -> PRESENTER
-protocol MainInteractorToPresenterProtocol: AnyObject {}
+protocol MainInteractorToPresenterProtocol: AnyObject {
+    
+    func getTVShowsSuccess()
+    func getTVShowsFailure(errorDescription: String)
+    
+}
 
 // MARK: - Interactor
 
@@ -42,6 +53,8 @@ protocol MainPresenterToInteractorProtocol: AnyObject {
     var presenter: MainInteractorToPresenterProtocol? { get set }
     var apiManager: MainInteractorToAPIManagerProtocol? { get set }
     
+    var tvShowsNames: [String] { get set }
+    
     func getTVShows()
     
 }
@@ -49,8 +62,8 @@ protocol MainPresenterToInteractorProtocol: AnyObject {
 // APIMANAGER -> INTERACTOR
 protocol MainAPIManagerToInteractorProtocol: AnyObject {
     
-    func fetchTVShowsSuccess()
-    func fetchTVShowsFailure()
+    func fetchTVShowsSuccess(tvShows: [TVShow])
+    func fetchTVShowsFailure(errorDescription: String)
     
 }
 
