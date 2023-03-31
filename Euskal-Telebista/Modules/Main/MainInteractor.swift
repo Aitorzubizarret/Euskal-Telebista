@@ -35,7 +35,9 @@ extension MainInteractor: MainPresenterToInteractorProtocol {
 extension MainInteractor: MainAPIManagerToInteractorProtocol {
     
     func fetchTVShowsSuccess(tvShows: [TVShow], baseURL: String) {
-        tvShowsNamesImages = tvShows.map {
+        let orderedTVShows = orderTVShowsAlphabetically(tvShows: tvShows)
+        
+        tvShowsNamesImages = orderedTVShows.map {
             let name: String = $0.NOMBRE_GROUP
             if let image = $0.images.first {
                 let urlString: String = baseURL + image.URL
@@ -48,6 +50,10 @@ extension MainInteractor: MainAPIManagerToInteractorProtocol {
     
     func fetchTVShowsFailure(errorDescription: String) {
         presenter?.getTVShowsFailure(errorDescription: errorDescription)
+    }
+    
+    func orderTVShowsAlphabetically(tvShows: [TVShow]) -> [TVShow] {
+        return tvShows.sorted {$0.NOMBRE_GROUP <= $1.NOMBRE_GROUP}
     }
     
 }

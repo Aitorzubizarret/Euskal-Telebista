@@ -66,6 +66,8 @@ protocol MainAPIManagerToInteractorProtocol: AnyObject {
     func fetchTVShowsSuccess(tvShows: [TVShow], baseURL: String)
     func fetchTVShowsFailure(errorDescription: String)
     
+    func orderTVShowsAlphabetically(tvShows: [TVShow]) -> [TVShow]
+    
 }
 
 // MARK: - Router
