@@ -15,7 +15,7 @@ class TVShowDetailRouter {}
 
 extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
     
-    static func createModule() -> UIViewController {
+    static func createModule(withTVShowId tvShowId: Int) -> UIViewController {
         // View Controller.
         let viewController = TVShowDetailViewController()
         
@@ -24,6 +24,7 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         
         // Dependency injection to View.
         viewController.presenter = presenter
+        viewController.presenter?.tvShowId = tvShowId // The ID of the TVShow selected by the user.
         
         // Dependency injection to Presenter.
         viewController.presenter?.view = viewController

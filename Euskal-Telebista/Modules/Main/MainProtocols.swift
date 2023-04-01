@@ -78,7 +78,7 @@ protocol MainPresenterToRouterProtocol: AnyObject {
     
     static func createModule() -> UIViewController
     
-    func showTVShowDetail(on view: MainPresenterToViewProtocol)
+    func showTVShowDetail(on view: MainPresenterToViewProtocol, tvShowId: Int)
     
 }
 

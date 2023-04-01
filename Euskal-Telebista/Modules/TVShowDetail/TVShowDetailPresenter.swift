@@ -16,13 +16,19 @@ class TVShowDetailPresenter  {
     var interactor: TVShowDetailPresenterToInteractorProtocol?
     var router: TVShowDetailPresenterToRouterProtocol?
     
+    var tvShowId: Int? = nil
+    
 }
 
 // MARK: - TVShowDetailViewToPresenterProtocol
 
 extension TVShowDetailPresenter: TVShowDetailViewToPresenterProtocol {
     
-    func viewDidLoad() {}
+    func viewDidLoad() {
+        guard let tvShowId = tvShowId else { return }
+        
+        print("Start searching the detail info of the TVShow \(tvShowId)")
+    }
     
 }
 

@@ -27,6 +27,8 @@ protocol TVShowDetailViewToPresenterProtocol {
     var interactor: TVShowDetailPresenterToInteractorProtocol? { get set }
     var router: TVShowDetailPresenterToRouterProtocol? { get set }
     
+    var tvShowId: Int? { get set }
+    
     func viewDidLoad()
     
 }
@@ -48,6 +50,6 @@ protocol TVShowDetailPresenterToInteractorProtocol {
 // PRESENTER -> ROUTER
 protocol TVShowDetailPresenterToRouterProtocol {
     
-    static func createModule() -> UIViewController
+    static func createModule(withTVShowId tvShowId: Int) -> UIViewController
     
 }

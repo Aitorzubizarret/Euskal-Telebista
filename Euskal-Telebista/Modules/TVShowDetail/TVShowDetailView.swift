@@ -25,6 +25,8 @@ class TVShowDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        
+        presenter?.viewDidLoad()
     }
     
     private func setupTableView() {

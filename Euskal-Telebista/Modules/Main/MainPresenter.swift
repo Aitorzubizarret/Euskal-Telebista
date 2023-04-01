@@ -29,7 +29,7 @@ extension MainPresenter: MainViewToPresenterProtocol {
     func didSelectTVShowsAt(_ row: Int) {
         guard let view = view else { return }
         
-        router?.showTVShowDetail(on: view)
+        router?.showTVShowDetail(on: view, tvShowId: 5308) // TODO: Send the correct TVShowId.
     }
     
     func numberOfTVShows() -> Int {
