@@ -27,7 +27,7 @@ extension TVShowDetailPresenter: TVShowDetailViewToPresenterProtocol {
     func viewDidLoad() {
         guard let tvShowId = tvShowId else { return }
         
-        print("Start searching the detail info of the TVShow \(tvShowId)")
+        interactor?.fetchTVShowDetailById(tvShowId)
     }
     
 }

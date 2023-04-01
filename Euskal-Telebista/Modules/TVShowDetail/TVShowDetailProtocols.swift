@@ -43,6 +43,8 @@ protocol TVShowDetailPresenterToInteractorProtocol {
     
     var presenter: TVShowDetailInteractorToPresenterProtocol? { get set }
     
+    func fetchTVShowDetailById(_ tvShowId: Int)
+    
 }
 
 // MARK: - Router

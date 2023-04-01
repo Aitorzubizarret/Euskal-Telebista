@@ -18,4 +18,10 @@ class TVShowDetailInteractor {
 
 // MARK: - TVShowDetailPresenterToInteractorProtocol
 
-extension TVShowDetailInteractor: TVShowDetailPresenterToInteractorProtocol {}
+extension TVShowDetailInteractor: TVShowDetailPresenterToInteractorProtocol {
+    
+    func fetchTVShowDetailById(_ tvShowId: Int) {
+        print("Start searching the detail info of the TVShow \(tvShowId)")
+    }
+    
+}
