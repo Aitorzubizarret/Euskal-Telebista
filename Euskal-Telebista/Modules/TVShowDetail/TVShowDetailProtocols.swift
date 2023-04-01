@@ -42,8 +42,9 @@ protocol TVShowDetailInteractorToPresenterProtocol {}
 protocol TVShowDetailPresenterToInteractorProtocol {
     
     var presenter: TVShowDetailInteractorToPresenterProtocol? { get set }
+    var apiManager: TVShowDetailInteractorToAPIManagerProtocol? { get set }
     
-    func fetchTVShowDetailById(_ tvShowId: Int)
+    func getTVShowDetailById(_ tvShowId: Int)
     
 }
 
@@ -53,5 +54,14 @@ protocol TVShowDetailPresenterToInteractorProtocol {
 protocol TVShowDetailPresenterToRouterProtocol {
     
     static func createModule(withTVShowId tvShowId: Int) -> UIViewController
+    
+}
+
+// MARK: - API Manager
+
+// INTERACTOR -> API MANAGER
+protocol TVShowDetailInteractorToAPIManagerProtocol {
+    
+    func fetchTVShowDetailWithId(tvShowId: Int)
     
 }

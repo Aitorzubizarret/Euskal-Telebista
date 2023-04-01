@@ -22,17 +22,24 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         // Presenter.
         let presenter: TVShowDetailViewToPresenterProtocol & TVShowDetailInteractorToPresenterProtocol = TVShowDetailPresenter()
         
+        // Interactor.
+        let interactor: TVShowDetailPresenterToInteractorProtocol = TVShowDetailInteractor()
+        
+        // API Manager.
+        let apiManager: APIManagerProtocol & TVShowDetailInteractorToAPIManagerProtocol = APIManager()
+        
         // Dependency injection to View.
         viewController.presenter = presenter
         viewController.presenter?.tvShowId = tvShowId // The ID of the TVShow selected by the user.
         
         // Dependency injection to Presenter.
         viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = TVShowDetailInteractor()
+        viewController.presenter?.interactor = interactor
         viewController.presenter?.router = TVShowDetailRouter()
         
         // Dependency injection to Interactor.
         viewController.presenter?.interactor?.presenter = presenter
+        viewController.presenter?.interactor?.apiManager = apiManager
         
         return viewController
     }

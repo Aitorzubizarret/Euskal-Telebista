@@ -17,7 +17,7 @@ final class APIManager {
         return session
     }
     
-    // MARK: -
+    // MARK: - Properties (from MainInteractorToAPIManagerProtocol)
     
     var interactor: MainAPIManagerToInteractorProtocol?
     
@@ -69,6 +69,7 @@ extension APIManager: APIManagerProtocol {
     
 }
 
+// MARK: MainInteractor To APIManager Protocol
 
 extension APIManager: MainInteractorToAPIManagerProtocol {
     
@@ -80,6 +81,24 @@ extension APIManager: MainInteractorToAPIManagerProtocol {
                 self.interactor?.fetchTVShowsSuccess(tvShows: tvShowSuccess.web_group, baseURL: tvShowSuccess.vod_url)
             case .failure(let error):
                 self.interactor?.fetchTVShowsFailure(errorDescription: "Error fetching TV Shows. \(error)")
+            }
+        }
+    }
+    
+}
+
+// MARK: - TVShowDetailInteractor To APIManager Protocol
+
+extension APIManager: TVShowDetailInteractorToAPIManagerProtocol {
+    
+    func fetchTVShowDetailWithId(tvShowId: Int) {
+        let tvShowDetailEndpoint = EndpointCases.tvShowDetail(id: tvShowId)
+        request(endpoint: tvShowDetailEndpoint) { (result: Result<TVShowResponse, Error>) in
+            switch result {
+            case .success(let tvShowResponse):
+                print("Success : \(tvShowResponse)")
+            case .failure(let error):
+                print("Error : \(error)")
             }
         }
     }

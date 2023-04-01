@@ -13,6 +13,7 @@ class TVShowDetailInteractor {
     // MARK: - Properties (from TVShowDetailPresenterToInteractorProtocol)
     
     var presenter: TVShowDetailInteractorToPresenterProtocol?
+    var apiManager: TVShowDetailInteractorToAPIManagerProtocol?
     
 }
 
@@ -20,8 +21,8 @@ class TVShowDetailInteractor {
 
 extension TVShowDetailInteractor: TVShowDetailPresenterToInteractorProtocol {
     
-    func fetchTVShowDetailById(_ tvShowId: Int) {
-        print("Start searching the detail info of the TVShow \(tvShowId)")
+    func getTVShowDetailById(_ tvShowId: Int) {
+        apiManager?.fetchTVShowDetailWithId(tvShowId: tvShowId)
     }
     
 }
