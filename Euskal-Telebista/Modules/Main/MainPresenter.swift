@@ -27,21 +27,24 @@ extension MainPresenter: MainViewToPresenterProtocol {
     }
     
     func didSelectTVShowsAt(_ row: Int) {
-        guard let view = view else { return }
+        guard let view = view,
+              let tvShowNamesImages = interactor?.tvShowsInfo else { return }
         
-        router?.showTVShowDetail(on: view, tvShowId: 5308) // TODO: Send the correct TVShowId.
+        let tvShowId: Int = tvShowNamesImages[row].id
+        
+        router?.showTVShowDetail(on: view, tvShowId: tvShowId)
     }
     
     func numberOfTVShows() -> Int {
-        return interactor?.tvShowsNamesImages.count ?? 0
+        return interactor?.tvShowsInfo.count ?? 0
     }
     
     func imageURLTVShowAt(_ row: Int) -> URL? {
-        return interactor?.tvShowsNamesImages[row].image
+        return interactor?.tvShowsInfo[row].image
     }
     
     func nameTVShowAt(_ row: Int) -> String {
-        return interactor?.tvShowsNamesImages[row].name ?? ""
+        return interactor?.tvShowsInfo[row].name ?? ""
     }
     
 }

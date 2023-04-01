@@ -55,7 +55,7 @@ protocol MainPresenterToInteractorProtocol: AnyObject {
     var presenter: MainInteractorToPresenterProtocol? { get set }
     var apiManager: MainInteractorToAPIManagerProtocol? { get set }
     
-    var tvShowsNamesImages: [TVShowNameImage] { get set }
+    var tvShowsInfo: [TVShowInfo] { get set }
     
     func getTVShows()
     
