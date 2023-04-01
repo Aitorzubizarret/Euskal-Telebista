@@ -33,6 +33,10 @@ class TVShowDetailViewController: UIViewController {
         
         // Appearance.
         tableView.separatorStyle = .none
+        
+        // Register the cell.
+        let tvShowDescriptionCell = UINib(nibName: "TVShowDescriptionTableViewCell", bundle: nil)
+        tableView.register(tvShowDescriptionCell, forCellReuseIdentifier: "TVShowDescriptionTableViewCell")
     }
 }
 
@@ -53,7 +57,9 @@ extension TVShowDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowDescriptionTableViewCell", for: indexPath) as! TVShowDescriptionTableViewCell
+        cell.tvShowDescription = "Temporary TV Show description text."
+        return cell
     }
     
 }
