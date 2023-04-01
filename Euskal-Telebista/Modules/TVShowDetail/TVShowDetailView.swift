@@ -60,7 +60,7 @@ extension TVShowDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowDescriptionTableViewCell", for: indexPath) as! TVShowDescriptionTableViewCell
-        cell.tvShowDescription = "Temporary TV Show description text."
+        cell.tvShowDescription = presenter?.tvShowDescription() ?? ""
         return cell
     }
     
@@ -68,4 +68,16 @@ extension TVShowDetailViewController: UITableViewDataSource {
 
 // MARK: - TVShowDetailPresenterToViewProtocol
 
-extension TVShowDetailViewController: TVShowDetailPresenterToViewProtocol {}
+extension TVShowDetailViewController: TVShowDetailPresenterToViewProtocol {
+    
+    func onGetTVShowDetailSuccess() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
+    func onGetTVShowDetailFailure(errorDescription: String) {
+        print(errorDescription)
+    }
+    
+}

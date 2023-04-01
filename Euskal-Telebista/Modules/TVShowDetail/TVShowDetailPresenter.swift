@@ -30,8 +30,30 @@ extension TVShowDetailPresenter: TVShowDetailViewToPresenterProtocol {
         interactor?.getTVShowDetailById(tvShowId)
     }
     
+    func tvShowName() -> String {
+        guard let selectedTVShow = interactor?.selectedTVShowDetail else { return "" }
+        
+        return selectedTVShow.name
+    }
+    
+    func tvShowDescription() -> String {
+        guard let selectedTVShow = interactor?.selectedTVShowDetail else { return "" }
+        
+        return selectedTVShow.description
+    }
+    
 }
 
 // MARK: - TVShowDetailInteractorToPresenterProtocol
 
-extension TVShowDetailPresenter: TVShowDetailInteractorToPresenterProtocol {}
+extension TVShowDetailPresenter: TVShowDetailInteractorToPresenterProtocol {
+    
+    func getTVShowDetailSuccess() {
+        view?.onGetTVShowDetailSuccess()
+    }
+    
+    func getTVShowDetailFailure(errorDescription: String) {
+        view?.onGetTVShowDetailFailure(errorDescription: errorDescription)
+    }
+    
+}

@@ -21,6 +21,10 @@ final class APIManager {
     
     var interactor: MainAPIManagerToInteractorProtocol?
     
+    // MARK: - Properties (from TVShowDetailInteractorToAPIManagerProtocol)
+    
+    var interactorTVShowDetail: TVShowDetailAPIManagerToInteractorProtocol?
+    
 }
 
 // MARK: - APIManager Protocol
@@ -53,8 +57,8 @@ extension APIManager: APIManagerProtocol {
         
         let task = session.dataTask(with: urlReques) { data, response, error in
             if let responseData = data {
-                let receivedData: String = String(data: responseData, encoding: .utf8) ?? ""
-                debugPrint("Data : \(receivedData) - Response")
+//                let receivedData: String = String(data: responseData, encoding: .utf8) ?? ""
+//                debugPrint("Data : \(receivedData) - Response")
                 do {
                     let response = try JSONDecoder().decode(T.self, from: responseData)
                     completion(.success(response))
@@ -96,9 +100,11 @@ extension APIManager: TVShowDetailInteractorToAPIManagerProtocol {
         request(endpoint: tvShowDetailEndpoint) { (result: Result<TVShowResponse, Error>) in
             switch result {
             case .success(let tvShowResponse):
-                print("Success : \(tvShowResponse)")
+                guard let tvShow = tvShowResponse.web_group.first else { return }
+
+                self.interactorTVShowDetail?.fetchTVShowDetailSuccess(tvShow: tvShow, baseURL: tvShowResponse.vod_url)
             case .failure(let error):
-                print("Error : \(error)")
+                self.interactorTVShowDetail?.fetchTVShowDetailFailure(errorDescription: "\(error)")
             }
         }
     }

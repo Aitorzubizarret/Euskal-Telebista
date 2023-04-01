@@ -40,6 +40,7 @@
 		1A747DCC29D79E0200878478 /* TVShowDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A747DCB29D79E0200878478 /* TVShowDetailView.xib */; };
 		1A747DD129D83B1500878478 /* TVShowDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A747DCF29D83B1500878478 /* TVShowDescriptionTableViewCell.swift */; };
 		1A747DD229D83B1500878478 /* TVShowDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A747DD029D83B1500878478 /* TVShowDescriptionTableViewCell.xib */; };
+		1A747DD429D89D6100878478 /* TVShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A747DD329D89D6100878478 /* TVShowDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		1A747DCB29D79E0200878478 /* TVShowDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowDetailView.xib; sourceTree = "<group>"; };
 		1A747DCF29D83B1500878478 /* TVShowDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		1A747DD029D83B1500878478 /* TVShowDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		1A747DD329D89D6100878478 /* TVShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				1A6B5ED729D6E6F50002C6CE /* ImageData.swift */,
 				1A6B5ED929D6E73D0002C6CE /* Playlist.swift */,
 				1A6B5EE429D777EA0002C6CE /* TVShowNameImage.swift */,
+				1A747DD329D89D6100878478 /* TVShowDetail.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				1A747DC729D79DEA00878478 /* TVShowDetailRouter.swift in Sources */,
 				1A6B5EC929D6E16B0002C6CE /* Endpoint.swift in Sources */,
 				1A6B5EC129D6DE520002C6CE /* MainRouter.swift in Sources */,
+				1A747DD429D89D6100878478 /* TVShowDetail.swift in Sources */,
 				1A6B5EDF29D72A600002C6CE /* TVShowCellTableViewCell.swift in Sources */,
 				1A6B5ED129D6E4D20002C6CE /* APIManager.swift in Sources */,
 				1A6B5ECF29D6E4C80002C6CE /* APIManagerProtocol.swift in Sources */,

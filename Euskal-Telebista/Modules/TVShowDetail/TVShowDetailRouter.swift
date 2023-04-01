@@ -23,10 +23,10 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         let presenter: TVShowDetailViewToPresenterProtocol & TVShowDetailInteractorToPresenterProtocol = TVShowDetailPresenter()
         
         // Interactor.
-        let interactor: TVShowDetailPresenterToInteractorProtocol = TVShowDetailInteractor()
+        let interactor: TVShowDetailPresenterToInteractorProtocol & TVShowDetailAPIManagerToInteractorProtocol = TVShowDetailInteractor()
         
         // API Manager.
-        let apiManager: APIManagerProtocol & TVShowDetailInteractorToAPIManagerProtocol = APIManager()
+        let apiManager: APIManagerProtocol & TVShowDetailInteractorToAPIManagerProtocol & TVShowDetailInteractorToAPIManagerProtocol = APIManager()
         
         // Dependency injection to View.
         viewController.presenter = presenter
@@ -40,6 +40,7 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         // Dependency injection to Interactor.
         viewController.presenter?.interactor?.presenter = presenter
         viewController.presenter?.interactor?.apiManager = apiManager
+        viewController.presenter?.interactor?.apiManager?.interactorTVShowDetail = interactor
         
         return viewController
     }

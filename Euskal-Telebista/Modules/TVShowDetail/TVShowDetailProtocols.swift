@@ -16,6 +16,9 @@ protocol TVShowDetailPresenterToViewProtocol {
     
     var presenter: TVShowDetailViewToPresenterProtocol? { get set }
     
+    func onGetTVShowDetailSuccess()
+    func onGetTVShowDetailFailure(errorDescription: String)
+    
 }
 
 // MARK: - Presenter
@@ -31,10 +34,18 @@ protocol TVShowDetailViewToPresenterProtocol {
     
     func viewDidLoad()
     
+    func tvShowName() -> String
+    func tvShowDescription() -> String
+    
 }
 
 // INTERACTOR -> PRESENTER
-protocol TVShowDetailInteractorToPresenterProtocol {}
+protocol TVShowDetailInteractorToPresenterProtocol {
+    
+    func getTVShowDetailSuccess()
+    func getTVShowDetailFailure(errorDescription: String)
+    
+}
 
 // MARK: - Interactor
 
@@ -44,7 +55,17 @@ protocol TVShowDetailPresenterToInteractorProtocol {
     var presenter: TVShowDetailInteractorToPresenterProtocol? { get set }
     var apiManager: TVShowDetailInteractorToAPIManagerProtocol? { get set }
     
+    var selectedTVShowDetail: TVShowDetail? { get set }
+    
     func getTVShowDetailById(_ tvShowId: Int)
+    
+}
+
+// API MANAGER -> INTERACTOR
+protocol TVShowDetailAPIManagerToInteractorProtocol {
+    
+    func fetchTVShowDetailSuccess(tvShow: TVShow, baseURL: String)
+    func fetchTVShowDetailFailure(errorDescription: String)
     
 }
 
@@ -61,6 +82,8 @@ protocol TVShowDetailPresenterToRouterProtocol {
 
 // INTERACTOR -> API MANAGER
 protocol TVShowDetailInteractorToAPIManagerProtocol {
+    
+    var interactorTVShowDetail: TVShowDetailAPIManagerToInteractorProtocol? { get set }
     
     func fetchTVShowDetailWithId(tvShowId: Int)
     

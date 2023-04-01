@@ -15,14 +15,43 @@ class TVShowDetailInteractor {
     var presenter: TVShowDetailInteractorToPresenterProtocol?
     var apiManager: TVShowDetailInteractorToAPIManagerProtocol?
     
+    var selectedTVShowDetail: TVShowDetail?
+    
 }
 
-// MARK: - TVShowDetailPresenterToInteractorProtocol
+// MARK: - TVShowDetail Presenter To InteractorProtocol
 
 extension TVShowDetailInteractor: TVShowDetailPresenterToInteractorProtocol {
     
     func getTVShowDetailById(_ tvShowId: Int) {
         apiManager?.fetchTVShowDetailWithId(tvShowId: tvShowId)
+    }
+    
+}
+
+// MARK: - TVShowDetail APIManager To InteractorProtocol
+
+extension TVShowDetailInteractor: TVShowDetailAPIManagerToInteractorProtocol {
+    
+    func fetchTVShowDetailSuccess(tvShow: TVShow, baseURL: String) {
+        let name = tvShow.NOMBRE_GROUP
+        let description = tvShow.SHORT_DESC
+        // TODO: Category is missing.
+        var image: URL? = nil
+        if let imageData = tvShow.images.first {
+            let imageString = baseURL + imageData.URL
+            image = URL(string: imageString)
+        }
+        
+        let tvShowDetail = TVShowDetail(name: name, category: "", description: description, image: image)
+        
+        selectedTVShowDetail = tvShowDetail
+        
+        presenter?.getTVShowDetailSuccess()
+    }
+    
+    func fetchTVShowDetailFailure(errorDescription: String) {
+        presenter?.getTVShowDetailFailure(errorDescription: errorDescription)
     }
     
 }
