@@ -47,4 +47,11 @@ extension MainRouter: MainPresenterToRouterProtocol {
         return viewController
     }
     
+    func showTVShowDetail(on view: MainPresenterToViewProtocol) {
+        let tvShowDetailVC = TVShowDetailRouter.createModule()
+        
+        let vc = view as! MainViewController
+        vc.navigationController?.show(tvShowDetailVC, sender: true)
+    }
+    
 }

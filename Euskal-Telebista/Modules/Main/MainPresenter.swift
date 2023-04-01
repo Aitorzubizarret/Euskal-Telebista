@@ -26,6 +26,12 @@ extension MainPresenter: MainViewToPresenterProtocol {
         interactor?.getTVShows()
     }
     
+    func didSelectTVShowsAt(_ row: Int) {
+        guard let view = view else { return }
+        
+        router?.showTVShowDetail(on: view)
+    }
+    
     func numberOfTVShows() -> Int {
         return interactor?.tvShowsNamesImages.count ?? 0
     }

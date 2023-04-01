@@ -31,6 +31,7 @@ protocol MainViewToPresenterProtocol: AnyObject {
     var router: MainPresenterToRouterProtocol? { get set }
     
     func viewDidLoad()
+    func didSelectTVShowsAt(_ row: Int)
     
     func numberOfTVShows() -> Int
     func imageURLTVShowAt(_ row: Int) -> URL?
@@ -76,6 +77,8 @@ protocol MainAPIManagerToInteractorProtocol: AnyObject {
 protocol MainPresenterToRouterProtocol: AnyObject {
     
     static func createModule() -> UIViewController
+    
+    func showTVShowDetail(on view: MainPresenterToViewProtocol)
     
 }
 

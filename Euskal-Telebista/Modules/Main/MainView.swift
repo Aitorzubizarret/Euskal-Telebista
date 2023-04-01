@@ -45,7 +45,13 @@ class MainViewController: UIViewController {
 
 // MARK: - UITableView Delegate
 
-extension MainViewController: UITableViewDelegate {}
+extension MainViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectTVShowsAt(indexPath.row)
+    }
+    
+}
 
 // MARK: - UITableView Data Source
 
