@@ -11,12 +11,15 @@ enum EndpointCases: Endpoint {
     
     case tvShows
     case tvShowDetail(id: Int)
+    case tvShowPlaylistDetail(id: Int)
     
     var httpMethod: String {
         switch self {
         case .tvShows:
             return "GET"
         case .tvShowDetail:
+            return "GET"
+        case .tvShowPlaylistDetail:
             return "GET"
         }
     }
@@ -27,6 +30,8 @@ enum EndpointCases: Endpoint {
             return "https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/Clasification/MULTIWEBTV/8/"
         case .tvShowDetail:
             return "https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/ByGroup/MULTIWEBTV/8/"
+        case .tvShowPlaylistDetail:
+            return "https://mam.eitb.eus/mam/REST/ServiceMultiweb/Playlist2/MULTIWEBTV/"
         }
     }
     
@@ -35,6 +40,8 @@ enum EndpointCases: Endpoint {
         case .tvShows:
             return "PROGRAMAS"
         case .tvShowDetail(let id):
+            return "\(id)"
+        case .tvShowPlaylistDetail(let id):
             return "\(id)"
         }
     }
@@ -45,6 +52,8 @@ enum EndpointCases: Endpoint {
             return nil
         case .tvShowDetail:
             return nil
+        case .tvShowPlaylistDetail:
+            return nil
         }
     }
     
@@ -53,6 +62,8 @@ enum EndpointCases: Endpoint {
         case .tvShows:
             return nil
         case .tvShowDetail:
+            return nil
+        case .tvShowPlaylistDetail:
             return nil
         }
     }
