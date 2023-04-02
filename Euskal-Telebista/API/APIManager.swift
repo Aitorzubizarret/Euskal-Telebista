@@ -78,7 +78,7 @@ extension APIManager: APIManagerProtocol {
 extension APIManager: MainInteractorToAPIManagerProtocol {
     
     func fetchTVShows() {
-        let tvShowsEndpoint = EndpointCases.tvShow
+        let tvShowsEndpoint = EndpointCases.tvShows
         request(endpoint: tvShowsEndpoint) { (result: Result<TVShowResponse, Error>) in
             switch result {
             case .success(let tvShowSuccess):

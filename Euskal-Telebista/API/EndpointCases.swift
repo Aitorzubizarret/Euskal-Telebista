@@ -9,12 +9,12 @@ import Foundation
 
 enum EndpointCases: Endpoint {
     
-    case tvShow
+    case tvShows
     case tvShowDetail(id: Int)
     
     var httpMethod: String {
         switch self {
-        case .tvShow:
+        case .tvShows:
             return "GET"
         case .tvShowDetail:
             return "GET"
@@ -23,7 +23,7 @@ enum EndpointCases: Endpoint {
     
     var baseURLString: String {
         switch self {
-        case .tvShow:
+        case .tvShows:
             return "https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/Clasification/MULTIWEBTV/8/"
         case .tvShowDetail:
             return "https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/ByGroup/MULTIWEBTV/8/"
@@ -32,7 +32,7 @@ enum EndpointCases: Endpoint {
     
     var path: String {
         switch self {
-        case .tvShow:
+        case .tvShows:
             return "PROGRAMAS"
         case .tvShowDetail(let id):
             return "\(id)"
@@ -41,7 +41,7 @@ enum EndpointCases: Endpoint {
     
     var headers: [String : Any]? {
         switch self {
-        case .tvShow:
+        case .tvShows:
             return nil
         case .tvShowDetail:
             return nil
@@ -50,7 +50,7 @@ enum EndpointCases: Endpoint {
     
     var body: [String : Any]? {
         switch self {
-        case .tvShow:
+        case .tvShows:
             return nil
         case .tvShowDetail:
             return nil
