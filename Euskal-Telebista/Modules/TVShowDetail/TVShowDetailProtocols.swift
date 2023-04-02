@@ -34,6 +34,7 @@ protocol TVShowDetailViewToPresenterProtocol {
     
     func viewDidLoad()
     
+    func tvShowImage() -> URL?
     func tvShowName() -> String
     func tvShowDescription() -> String
     

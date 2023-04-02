@@ -37,8 +37,8 @@ class TVShowDetailViewController: UIViewController {
         tableView.separatorStyle = .none
         
         // Register the cell.
-        let tvShowDescriptionCell = UINib(nibName: "TVShowDescriptionTableViewCell", bundle: nil)
-        tableView.register(tvShowDescriptionCell, forCellReuseIdentifier: "TVShowDescriptionTableViewCell")
+        let tvShowDescriptionCell = UINib(nibName: "TVShowMainInfoTableViewCell", bundle: nil)
+        tableView.register(tvShowDescriptionCell, forCellReuseIdentifier: "TVShowMainInfoTableViewCell")
     }
 }
 
@@ -59,7 +59,9 @@ extension TVShowDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowDescriptionTableViewCell", for: indexPath) as! TVShowDescriptionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowMainInfoTableViewCell", for: indexPath) as! TVShowMainInfoTableViewCell
+        cell.tvShowImage = presenter?.tvShowImage()
+        cell.tvShowName = presenter?.tvShowName() ?? ""
         cell.tvShowDescription = presenter?.tvShowDescription() ?? ""
         return cell
     }

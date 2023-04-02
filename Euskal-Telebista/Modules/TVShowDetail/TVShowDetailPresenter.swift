@@ -30,6 +30,12 @@ extension TVShowDetailPresenter: TVShowDetailViewToPresenterProtocol {
         interactor?.getTVShowDetailById(tvShowId)
     }
     
+    func tvShowImage() -> URL? {
+        guard let selectedTVShow = interactor?.selectedTVShowDetail else { return nil }
+        
+        return selectedTVShow.image
+    }
+    
     func tvShowName() -> String {
         guard let selectedTVShow = interactor?.selectedTVShowDetail else { return "" }
         
