@@ -41,6 +41,8 @@
 		1A747DD629D8A98E00878478 /* TVShowInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A747DD529D8A98E00878478 /* TVShowInfo.swift */; };
 		1A747DDA29D9801600878478 /* TVShowMainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A747DD829D9801600878478 /* TVShowMainInfoTableViewCell.swift */; };
 		1A747DDB29D9801600878478 /* TVShowMainInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A747DD929D9801600878478 /* TVShowMainInfoTableViewCell.xib */; };
+		1AADBFC429DAC5510086BCB0 /* TVShowPlaylistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AADBFC329DAC5510086BCB0 /* TVShowPlaylistResponse.swift */; };
+		1AADBFC629DAC6440086BCB0 /* TVShowPlaylistWebMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AADBFC529DAC6440086BCB0 /* TVShowPlaylistWebMedia.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		1A747DD529D8A98E00878478 /* TVShowInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowInfo.swift; sourceTree = "<group>"; };
 		1A747DD829D9801600878478 /* TVShowMainInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMainInfoTableViewCell.swift; sourceTree = "<group>"; };
 		1A747DD929D9801600878478 /* TVShowMainInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowMainInfoTableViewCell.xib; sourceTree = "<group>"; };
+		1AADBFC329DAC5510086BCB0 /* TVShowPlaylistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowPlaylistResponse.swift; sourceTree = "<group>"; };
+		1AADBFC529DAC6440086BCB0 /* TVShowPlaylistWebMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowPlaylistWebMedia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,8 @@
 				1A6B5ED929D6E73D0002C6CE /* Playlist.swift */,
 				1A747DD529D8A98E00878478 /* TVShowInfo.swift */,
 				1A747DD329D89D6100878478 /* TVShowDetail.swift */,
+				1AADBFC329DAC5510086BCB0 /* TVShowPlaylistResponse.swift */,
+				1AADBFC529DAC6440086BCB0 /* TVShowPlaylistWebMedia.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -441,9 +447,11 @@
 				1A6B5E8729D6383E0002C6CE /* AppDelegate.swift in Sources */,
 				1A747DC929D79DEA00878478 /* TVShowDetailInteractor.swift in Sources */,
 				1A6B5EC429D6DE520002C6CE /* MainView.swift in Sources */,
+				1AADBFC429DAC5510086BCB0 /* TVShowPlaylistResponse.swift in Sources */,
 				1A747DC629D79DEA00878478 /* TVShowDetailPresenter.swift in Sources */,
 				1A6B5ED429D6E5E40002C6CE /* TVShow.swift in Sources */,
 				1A747DC729D79DEA00878478 /* TVShowDetailRouter.swift in Sources */,
+				1AADBFC629DAC6440086BCB0 /* TVShowPlaylistWebMedia.swift in Sources */,
 				1A6B5EC929D6E16B0002C6CE /* Endpoint.swift in Sources */,
 				1A6B5EC129D6DE520002C6CE /* MainRouter.swift in Sources */,
 				1A747DD429D89D6100878478 /* TVShowDetail.swift in Sources */,
