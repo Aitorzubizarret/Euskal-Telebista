@@ -87,5 +87,6 @@ protocol TVShowDetailInteractorToAPIManagerProtocol {
     var interactorTVShowDetail: TVShowDetailAPIManagerToInteractorProtocol? { get set }
     
     func fetchTVShowDetailWithId(tvShowId: Int)
+    func fetchTVShowPlaylistWithId(tvShowPlaylistId: Int)
     
 }

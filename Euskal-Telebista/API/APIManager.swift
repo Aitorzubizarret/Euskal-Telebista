@@ -109,4 +109,16 @@ extension APIManager: TVShowDetailInteractorToAPIManagerProtocol {
         }
     }
     
+    func fetchTVShowPlaylistWithId(tvShowPlaylistId: Int) {
+        let tvShowPlaylistEndpoint = EndpointCases.tvShowPlaylistDetail(id: tvShowPlaylistId)
+        request(endpoint: tvShowPlaylistEndpoint) { (result: Result<TVShowPlaylistResponse, Error>) in
+            switch result {
+            case .success(let tvShowPlaylistResponse):
+                print("TVShowPlaylistResponse \(tvShowPlaylistResponse)")
+            case .failure(let error):
+                print("Error \(error)")
+            }
+        }
+    }
+    
 }

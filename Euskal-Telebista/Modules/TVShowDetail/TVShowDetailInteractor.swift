@@ -34,6 +34,13 @@ extension TVShowDetailInteractor: TVShowDetailPresenterToInteractorProtocol {
 extension TVShowDetailInteractor: TVShowDetailAPIManagerToInteractorProtocol {
     
     func fetchTVShowDetailSuccess(tvShow: TVShow, baseURL: String) {
+        // TVShow Playlists IDs.
+        let playlistsIDs: [Int] = tvShow.web_playlist.map { $0.ID }
+        for playlistsID in playlistsIDs {
+            apiManager?.fetchTVShowPlaylistWithId(tvShowPlaylistId: playlistsID)
+        }
+        
+        // TVShow Main Info
         let name = tvShow.NOMBRE_GROUP
         let description = tvShow.SHORT_DESC
         // TODO: Category is missing.
