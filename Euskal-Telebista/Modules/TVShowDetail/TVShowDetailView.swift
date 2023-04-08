@@ -39,6 +39,9 @@ class TVShowDetailViewController: UIViewController {
         // Register the cell.
         let tvShowDescriptionCell = UINib(nibName: "TVShowMainInfoTableViewCell", bundle: nil)
         tableView.register(tvShowDescriptionCell, forCellReuseIdentifier: "TVShowMainInfoTableViewCell")
+        
+        let tvShowPlaylistEpisodeCell = UINib(nibName: "TVShowPlaylistInfoTableViewCell", bundle: nil)
+        tableView.register(tvShowPlaylistEpisodeCell, forCellReuseIdentifier: "TVShowPlaylistInfoTableViewCell")
     }
 }
 
@@ -51,19 +54,26 @@ extension TVShowDetailViewController: UITableViewDelegate {}
 extension TVShowDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2 // Detail info + Playlist
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return section == 0 ? 1 : 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowMainInfoTableViewCell", for: indexPath) as! TVShowMainInfoTableViewCell
-        cell.tvShowImage = presenter?.tvShowImage()
-        cell.tvShowName = presenter?.tvShowName() ?? ""
-        cell.tvShowDescription = presenter?.tvShowDescription() ?? ""
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowMainInfoTableViewCell", for: indexPath) as! TVShowMainInfoTableViewCell
+            cell.tvShowImage = presenter?.tvShowImage()
+            cell.tvShowName = presenter?.tvShowName() ?? ""
+            cell.tvShowDescription = presenter?.tvShowDescription() ?? ""
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowPlaylistInfoTableViewCell", for: indexPath) as! TVShowPlaylistInfoTableViewCell
+            return cell
+            
+        }
+        
     }
     
 }
