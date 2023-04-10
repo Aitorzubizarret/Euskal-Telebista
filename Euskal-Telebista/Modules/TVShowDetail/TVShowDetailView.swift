@@ -47,18 +47,25 @@ class TVShowDetailViewController: UIViewController {
 
 // MARK: - UITableView Delegate
 
-extension TVShowDetailViewController: UITableViewDelegate {}
+extension TVShowDetailViewController: UITableViewDelegate {
+    
+    // TODO: viewForHeaderInSection
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return presenter?.titleForHeaderInSection(section: section)
+    }
+    
+}
 
 // MARK: - UITableView Data Source
 
 extension TVShowDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2 // Detail info + Playlist
+        presenter?.numberOfSections() ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 2
+        return presenter?.numberOfRowsInSection(section: section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,10 +77,11 @@ extension TVShowDetailViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowPlaylistInfoTableViewCell", for: indexPath) as! TVShowPlaylistInfoTableViewCell
+            cell.episodeName = presenter?.episodeName(section: indexPath.section, row: indexPath.row) ?? ""
+            cell.episodeImageURL = presenter?.episodeImage(section: indexPath.section, row: indexPath.row)
             return cell
             
         }
-        
     }
     
 }
@@ -89,6 +97,16 @@ extension TVShowDetailViewController: TVShowDetailPresenterToViewProtocol {
     }
     
     func onGetTVShowDetailFailure(errorDescription: String) {
+        print(errorDescription)
+    }
+    
+    func onGetTVShowPlaylistSuccess() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
+    func onGetTVShowPlaylistFailure(errorDescription: String) {
         print(errorDescription)
     }
     

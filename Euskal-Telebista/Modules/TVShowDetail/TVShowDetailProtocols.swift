@@ -18,6 +18,8 @@ protocol TVShowDetailPresenterToViewProtocol {
     
     func onGetTVShowDetailSuccess()
     func onGetTVShowDetailFailure(errorDescription: String)
+    func onGetTVShowPlaylistSuccess()
+    func onGetTVShowPlaylistFailure(errorDescription: String)
     
 }
 
@@ -34,9 +36,16 @@ protocol TVShowDetailViewToPresenterProtocol {
     
     func viewDidLoad()
     
+    func numberOfSections() -> Int
+    func titleForHeaderInSection(section: Int) -> String
+    func numberOfRowsInSection(section: Int) -> Int
+    
     func tvShowImage() -> URL?
     func tvShowName() -> String
     func tvShowDescription() -> String
+    
+    func episodeName(section: Int, row: Int) -> String
+    func episodeImage(section: Int, row: Int) -> URL?
     
 }
 
@@ -45,6 +54,8 @@ protocol TVShowDetailInteractorToPresenterProtocol {
     
     func getTVShowDetailSuccess()
     func getTVShowDetailFailure(errorDescription: String)
+    func getTVShowPlaylistSuccess()
+    func getTVShowPlaylistFailure(errorDescription: String)
     
 }
 
@@ -57,6 +68,7 @@ protocol TVShowDetailPresenterToInteractorProtocol {
     var apiManager: TVShowDetailInteractorToAPIManagerProtocol? { get set }
     
     var selectedTVShowDetail: TVShowDetail? { get set }
+    var selectedTVShowPlaylists: [TVShowPlaylist] { get set }
     
     func getTVShowDetailById(_ tvShowId: Int)
     
@@ -67,6 +79,8 @@ protocol TVShowDetailAPIManagerToInteractorProtocol {
     
     func fetchTVShowDetailSuccess(tvShow: TVShow, baseURL: String)
     func fetchTVShowDetailFailure(errorDescription: String)
+    func fetchTVShowPlaylistSuccess(tvShowPlaylistResponse: TVShowPlaylistResponse)
+    func fetchTVShowPlaylistFailure(errorDescription: String)
     
 }
 

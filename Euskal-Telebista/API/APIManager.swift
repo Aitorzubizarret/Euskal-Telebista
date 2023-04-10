@@ -114,9 +114,9 @@ extension APIManager: TVShowDetailInteractorToAPIManagerProtocol {
         request(endpoint: tvShowPlaylistEndpoint) { (result: Result<TVShowPlaylistResponse, Error>) in
             switch result {
             case .success(let tvShowPlaylistResponse):
-                print("TVShowPlaylistResponse \(tvShowPlaylistResponse)")
+                self.interactorTVShowDetail?.fetchTVShowPlaylistSuccess(tvShowPlaylistResponse: tvShowPlaylistResponse)
             case .failure(let error):
-                print("Error \(error)")
+                self.interactorTVShowDetail?.fetchTVShowPlaylistFailure(errorDescription: "Error: \(error)")
             }
         }
     }

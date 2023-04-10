@@ -12,7 +12,7 @@ struct TVShowPlaylistEpisode: Codable {
     let startDate: Date
     let endDate: Date?
     let pubDate: Date
-    let imageURL: String
+    let imageURL: URL?
     let length: Int
     let language: String
     let title_EU: String
