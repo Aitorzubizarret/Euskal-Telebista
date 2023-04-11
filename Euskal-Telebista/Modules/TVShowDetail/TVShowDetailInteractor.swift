@@ -16,8 +16,26 @@ class TVShowDetailInteractor {
     var apiManager: TVShowDetailInteractorToAPIManagerProtocol?
     
     var selectedTVShowDetail: TVShowDetail?
-    var selectedTVShowPlaylists: [TVShowPlaylist] = []
-    
+    var playlistsIDsAndPositions: [[Int]] = [[]]
+    var selectedTVShowPlaylists: [TVShowPlaylist] = [] {
+        didSet {
+            if selectedTVShowPlaylists.count == playlistsIDsAndPositions.count {
+                orderedTVShowPlaylists = []
+                
+                for playlistsIDsAndPosition in playlistsIDsAndPositions {
+                    let tvShowPlaylist = selectedTVShowPlaylists.first { $0.id ==  "\(playlistsIDsAndPosition[0])" }
+                    if let tvShowPlaylist = tvShowPlaylist {
+                        orderedTVShowPlaylists.append(tvShowPlaylist)
+                    }
+                }
+                
+                selectedTVShowPlaylists = orderedTVShowPlaylists
+                
+                presenter?.getTVShowPlaylistSuccess()
+            }
+        }
+    }
+    var orderedTVShowPlaylists: [TVShowPlaylist] = []
 }
 
 // MARK: - TVShowDetail Presenter To InteractorProtocol
@@ -36,9 +54,16 @@ extension TVShowDetailInteractor: TVShowDetailAPIManagerToInteractorProtocol {
     
     func fetchTVShowDetailSuccess(tvShow: TVShow, baseURL: String) {
         // TVShow Playlists IDs.
-        let playlistsIDs: [Int] = tvShow.web_playlist.map { $0.ID }
-        for playlistsID in playlistsIDs {
-            apiManager?.fetchTVShowPlaylistWithId(tvShowPlaylistId: playlistsID)
+        playlistsIDsAndPositions = tvShow.web_playlist.map { [$0.ID, $0.ORDEN] }
+        
+        print("NOT Ordered : \(playlistsIDsAndPositions)")
+        
+        playlistsIDsAndPositions.sort { $0[1] > $1[1] }
+        
+        print("Ordered : \(playlistsIDsAndPositions)")
+        
+        for playlistsID in playlistsIDsAndPositions {
+            apiManager?.fetchTVShowPlaylistWithId(tvShowPlaylistId: playlistsID[0])
         }
         
         // TVShow Main Info
@@ -89,8 +114,6 @@ extension TVShowDetailInteractor: TVShowDetailAPIManagerToInteractorProtocol {
                                             episodes: tvShowPlaylistEpisodes)
         
         selectedTVShowPlaylists.append(tvShowPlaylist)
-        
-        presenter?.getTVShowPlaylistSuccess()
     }
     
     func fetchTVShowPlaylistFailure(errorDescription: String) {
