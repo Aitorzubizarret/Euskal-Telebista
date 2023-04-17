@@ -55,7 +55,9 @@ extension TVShowDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.didSelectRowAt(atIndexPath: indexPath)
+        if indexPath.section != 0 {
+            presenter?.didSelectRowAt(atIndexPath: indexPath)
+        }
     }
     
 }
