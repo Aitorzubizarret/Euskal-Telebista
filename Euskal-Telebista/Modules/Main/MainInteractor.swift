@@ -12,7 +12,7 @@ class MainInteractor {
 
     // MARK: - Properties (from MainPresenterToInteractorProtocol)
     
-    var presenter: MainInteractorToPresenterProtocol?
+    weak var presenter: MainInteractorToPresenterProtocol?
     var apiManager: MainInteractorToAPIManagerProtocol?
     
     var tvShowsInfo: [TVShowInfo] = [] {

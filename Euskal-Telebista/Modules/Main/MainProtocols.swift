@@ -85,7 +85,7 @@ protocol MainPresenterToRouterProtocol: AnyObject {
 // MARK: - API Manager
 
 // INTERACTOR -> API MANAGER
-protocol MainInteractorToAPIManagerProtocol {
+protocol MainInteractorToAPIManagerProtocol: AnyObject {
     
     var interactor: MainAPIManagerToInteractorProtocol? { get set }
     

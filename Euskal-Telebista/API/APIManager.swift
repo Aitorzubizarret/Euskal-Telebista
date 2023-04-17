@@ -19,7 +19,7 @@ final class APIManager {
     
     // MARK: - Properties (from MainInteractorToAPIManagerProtocol)
     
-    var interactor: MainAPIManagerToInteractorProtocol?
+    weak var interactor: MainAPIManagerToInteractorProtocol?
     
     // MARK: - Properties (from TVShowDetailInteractorToAPIManagerProtocol)
     
