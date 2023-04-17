@@ -54,6 +54,8 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         
         let vc = view as! TVShowDetailViewController
         vc.present(playerController, animated: true)
+        
+        player.play()
     }
     
 }
