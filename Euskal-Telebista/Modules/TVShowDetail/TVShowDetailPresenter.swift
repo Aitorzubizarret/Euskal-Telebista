@@ -81,6 +81,28 @@ extension TVShowDetailPresenter: TVShowDetailViewToPresenterProtocol {
         return interactor?.selectedTVShowPlaylists[section - 1].episodes[row].imageURL
     }
     
+    func didSelectRowAt(atIndexPath: IndexPath) {
+        
+        let section = atIndexPath.section - 1
+        let row = atIndexPath.row
+        
+        guard let videoIdString = interactor?.selectedTVShowPlaylists[section].episodes[row].id,
+              let videoId: Int = Int(videoIdString) else { return }
+        
+        interactor?.getTVShowVideoById(videoId)
+    }
+    
+    func openVideoPlayer() {
+        guard let view = view,
+              let selectedVideoSource = interactor?.selectedTVShowVideoSource,
+              let selectedVideoSourceURL = URL(string: selectedVideoSource.PMD_URL) else { return }
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.router?.openVideoPlayer(on: view, videoURL: selectedVideoSourceURL)
+        }
+        
+    }
+    
 }
 
 // MARK: - TVShowDetailInteractorToPresenterProtocol
@@ -101,6 +123,10 @@ extension TVShowDetailPresenter: TVShowDetailInteractorToPresenterProtocol {
     
     func getTVShowPlaylistFailure(errorDescription: String) {
         view?.onGetTVShowPlaylistFailure(errorDescription: errorDescription)
+    }
+    
+    func getTVShowVideoSuccess() {
+        view?.onGetTVShowVideoSuccess()
     }
     
 }

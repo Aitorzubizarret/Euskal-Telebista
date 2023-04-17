@@ -121,4 +121,19 @@ extension APIManager: TVShowDetailInteractorToAPIManagerProtocol {
         }
     }
     
+    func fetchTVShowVideo(videoId: Int) {
+        let tvShowVideoEndpoint = EndpointCases.tvShowVideo(id: videoId)
+        request(endpoint: tvShowVideoEndpoint) { (result: Result<TVShowVideoResponse, Error>) in
+            switch result {
+            case .success(let tvShowVideoResponse):
+                print("Success \(tvShowVideoResponse)")
+                if let tvShowVideo = tvShowVideoResponse.web_media.first {
+                    self.interactorTVShowDetail?.fetchTVShowVideoSucess(tvShowVideo: tvShowVideo)
+                }
+            case .failure(let error):
+                print("Error \(error)")
+            }
+        }
+    }
+    
 }

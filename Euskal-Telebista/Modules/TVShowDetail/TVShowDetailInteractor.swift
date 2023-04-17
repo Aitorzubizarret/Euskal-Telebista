@@ -36,6 +36,7 @@ class TVShowDetailInteractor {
         }
     }
     var orderedTVShowPlaylists: [TVShowPlaylist] = []
+    var selectedTVShowVideoSource: TVShowVideoSource? = nil
 }
 
 // MARK: - TVShowDetail Presenter To InteractorProtocol
@@ -44,6 +45,10 @@ extension TVShowDetailInteractor: TVShowDetailPresenterToInteractorProtocol {
     
     func getTVShowDetailById(_ tvShowId: Int) {
         apiManager?.fetchTVShowDetailWithId(tvShowId: tvShowId)
+    }
+    
+    func getTVShowVideoById(_ videoId: Int) {
+        apiManager?.fetchTVShowVideo(videoId: videoId)
     }
     
 }
@@ -118,6 +123,14 @@ extension TVShowDetailInteractor: TVShowDetailAPIManagerToInteractorProtocol {
     
     func fetchTVShowPlaylistFailure(errorDescription: String) {
         presenter?.getTVShowPlaylistFailure(errorDescription: errorDescription)
+    }
+    
+    func fetchTVShowVideoSucess(tvShowVideo: TVShowVideo) {
+        if let firstVideoSource: TVShowVideoSource = tvShowVideo.RENDITIONS.first {
+            self.selectedTVShowVideoSource = firstVideoSource
+            
+            presenter?.getTVShowVideoSuccess()
+        }
     }
     
 }

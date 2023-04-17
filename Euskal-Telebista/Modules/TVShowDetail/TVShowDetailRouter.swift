@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import AVFoundation
+import AVKit
 
 class TVShowDetailRouter {}
 
@@ -43,6 +45,15 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         viewController.presenter?.interactor?.apiManager?.interactorTVShowDetail = interactor
         
         return viewController
+    }
+    
+    func openVideoPlayer(on view: TVShowDetailPresenterToViewProtocol, videoURL: URL) {
+        let player = AVPlayer(url: videoURL)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        
+        let vc = view as! TVShowDetailViewController
+        vc.present(playerController, animated: true)
     }
     
 }

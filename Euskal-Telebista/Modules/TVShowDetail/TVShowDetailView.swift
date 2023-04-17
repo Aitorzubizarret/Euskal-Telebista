@@ -54,6 +54,10 @@ extension TVShowDetailViewController: UITableViewDelegate {
         return presenter?.titleForHeaderInSection(section: section)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRowAt(atIndexPath: indexPath)
+    }
+    
 }
 
 // MARK: - UITableView Data Source
@@ -107,6 +111,14 @@ extension TVShowDetailViewController: TVShowDetailPresenterToViewProtocol {
     }
     
     func onGetTVShowPlaylistFailure(errorDescription: String) {
+        print(errorDescription)
+    }
+    
+    func onGetTVShowVideoSuccess() {
+        presenter?.openVideoPlayer()
+    }
+    
+    func onGetTVShowVideoFailure(errorDescription: String) {
         print(errorDescription)
     }
     

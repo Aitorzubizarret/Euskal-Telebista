@@ -20,6 +20,8 @@ protocol TVShowDetailPresenterToViewProtocol {
     func onGetTVShowDetailFailure(errorDescription: String)
     func onGetTVShowPlaylistSuccess()
     func onGetTVShowPlaylistFailure(errorDescription: String)
+    func onGetTVShowVideoSuccess()
+    func onGetTVShowVideoFailure(errorDescription: String)
     
 }
 
@@ -47,6 +49,10 @@ protocol TVShowDetailViewToPresenterProtocol {
     func episodeName(section: Int, row: Int) -> String
     func episodeImage(section: Int, row: Int) -> URL?
     
+    func didSelectRowAt(atIndexPath: IndexPath)
+    
+    func openVideoPlayer()
+    
 }
 
 // INTERACTOR -> PRESENTER
@@ -56,6 +62,7 @@ protocol TVShowDetailInteractorToPresenterProtocol {
     func getTVShowDetailFailure(errorDescription: String)
     func getTVShowPlaylistSuccess()
     func getTVShowPlaylistFailure(errorDescription: String)
+    func getTVShowVideoSuccess()
     
 }
 
@@ -69,8 +76,10 @@ protocol TVShowDetailPresenterToInteractorProtocol {
     
     var selectedTVShowDetail: TVShowDetail? { get set }
     var selectedTVShowPlaylists: [TVShowPlaylist] { get set }
+    var selectedTVShowVideoSource: TVShowVideoSource? { get set }
     
     func getTVShowDetailById(_ tvShowId: Int)
+    func getTVShowVideoById(_ videoId: Int)
     
 }
 
@@ -81,6 +90,7 @@ protocol TVShowDetailAPIManagerToInteractorProtocol {
     func fetchTVShowDetailFailure(errorDescription: String)
     func fetchTVShowPlaylistSuccess(tvShowPlaylistResponse: TVShowPlaylistResponse)
     func fetchTVShowPlaylistFailure(errorDescription: String)
+    func fetchTVShowVideoSucess(tvShowVideo: TVShowVideo)
     
 }
 
@@ -90,6 +100,7 @@ protocol TVShowDetailAPIManagerToInteractorProtocol {
 protocol TVShowDetailPresenterToRouterProtocol {
     
     static func createModule(withTVShowId tvShowId: Int) -> UIViewController
+    func openVideoPlayer(on view: TVShowDetailPresenterToViewProtocol, videoURL: URL)
     
 }
 
@@ -102,5 +113,6 @@ protocol TVShowDetailInteractorToAPIManagerProtocol {
     
     func fetchTVShowDetailWithId(tvShowId: Int)
     func fetchTVShowPlaylistWithId(tvShowPlaylistId: Int)
+    func fetchTVShowVideo(videoId: Int)
     
 }
