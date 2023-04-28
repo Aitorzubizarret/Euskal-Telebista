@@ -52,6 +52,9 @@ extension TVShowDetailRouter: TVShowDetailPresenterToRouterProtocol {
         let playerController = AVPlayerViewController()
         playerController.player = player
         
+        // Makes posible to listen to audio files even in "silent mode".
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
+        
         let vc = view as! TVShowDetailViewController
         vc.present(playerController, animated: true)
         
